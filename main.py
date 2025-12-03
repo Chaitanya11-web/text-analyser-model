@@ -29,7 +29,7 @@ class InputText(BaseModel):
 
 @app.get("/")
 def root():
-    return {"status": "Text Classification API running"}
+    return {"status": "Text Classification Model is running"}
 
 @app.post("/predict")
 def predict(data: InputText):
@@ -56,3 +56,4 @@ def predict(data: InputText):
         "cleaned": cleaned,
         "prediction": label_map[pred]
     }
+
